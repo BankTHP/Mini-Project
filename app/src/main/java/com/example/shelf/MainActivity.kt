@@ -1,12 +1,14 @@
 package com.example.shelf
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shelf.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MovieOnClickListener {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         val mainActivity = this
         var layoutManagerHorizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        var grip = GridLayoutManager(applicationContext, 3)
         binding.shelfRecyclerView.apply {
+            //layoutManager = GridLayoutManager(applicationContext, 3)
             layoutManager = layoutManagerHorizontal
-            adapter = CardAdapter(movieList)
+            adapter = CardAdapter(movieList,mainActivity)
         }
     }
 
@@ -119,5 +123,11 @@ class MainActivity : AppCompatActivity() {
         movieList.add(Movie10)
 
 
+    }
+
+    override fun onClick(movie: Movie) {
+        val intent = Intent(applicationContext, DetailActivity::class.java)
+        intent.putExtra(MOVIE_ID_EXTRA, movie.id)
+        startActivity(intent)
     }
 }
