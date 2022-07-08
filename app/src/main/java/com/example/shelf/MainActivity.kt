@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, " +
                     "Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including Catwoman, Egghead, The Joker, King Tut, The Penguin, and The Riddler"
         )
-
+        movieList.add(Movie1)
         val Movie2 = Movie(
             R.drawable.batman_beyond,
             "Batman Beyond",
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "steal the Batsuit and take matters into his own hands! Vowing to avenge his father's death, Terry dons the high-tech suit - tricked out with jetpacks for flying, a supersensitive microphone " +
                     "for eavesdropping and even camouflage capabilities - in search of his father's assassin."
         )
+        movieList.add(Movie2)
         val Movie3 = Movie(
             R.drawable.thebatman,
             "The Batman",
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "incredible gadgets, awesome animation and a cool new vibe, these 13 exciting episodes from the hit series showcase The Batman taking on your favourite villains – The Joker, The Penguin, Mr. Freeze, Catwoman, " +
                     "Bane – and new crazies you'll love to hate!"
         )
+        movieList.add(Movie3)
         val Movie4 = Movie(
             R.drawable.batmanofshanghai,
             "Batman of Shanghai",
@@ -64,6 +66,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
             "Batman of Shanghai is a series of animated shorts from the DC Nation block on Cartoon Network, presenting a unique re-imagining of the Batman universe in a heavily stylized form, set in a 1930's era Shanghai. " +
                     "The shorts were animated by Wolf Smoke Studios."
         )
+        movieList.add(Movie4)
         val Movie5 = Movie(
             R.drawable.bewarethebatman,
             "Beware the Batman",
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "Aiding Batman in his fight against crime are retired MI-6 operative Alfred Pennyworth and former CIA agent Tatsu Katana Yamashiro.The show premiered on Cartoon Network in 2013, however due to declining ratings, " +
                     "it was moved to the Toonami block of Adult Swim in 2014 to air the rest of the episodes."
         )
+        movieList.add(Movie5)
         val Movie6 = Movie(
             R.drawable.batmantheanimatedseries,
             "Batman: The Animated Series",
@@ -80,6 +84,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "deadly-beautiful Poison Ivy and primitive Killer Croc in a fresh take on super hero storytelling. Intelligent, dramatic stories, " +
                     "unique characters and sharp dialog shaped this edgy TV series into an Emmy®-winning powerhouse that brought the Caped Crusader out of the dark alleys of TV history and into the present for fans of all ages."
         )
+        movieList.add(Movie6)
         val Movie7 = Movie(
             R.drawable.thenewbatmanadventures,
             "The New Batman Adventures",
@@ -87,6 +92,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
             "The New Batman Adventures</b> comes from the creators of Batman and Superman. This series was created because Fox had not lived up to the contract that they had given Batman, " +
                     "so the WB decided to give the show another chance. Bruce Timm then went back and decided to re-design all of the characters from Batman and ended up revamping the series all-together."
         )
+        movieList.add(Movie7)
         val Movie8 = Movie(
             R.drawable.theflash,
             "The Flash",
@@ -96,12 +102,14 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends " +
                     "and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash!"
         )
+        movieList.add(Movie8)
         val Movie9 = Movie(
             R.drawable.theflashchroniclesofcisco,
             "The Flash: Chronicles of Cisco",
             "Action",
             "he Flash: Chronicles of Cisco follows \"The Flash\" character Cisco Ramon as he works late at S.T.A.R. Labs making improvements to the Flash's suit."
         )
+        movieList.add(Movie9)
         val Movie10 = Movie(
             R.drawable.theboys,
             "The Boys",
@@ -110,19 +118,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "\\\"The Boys,\\\" who set out to take down corrupt superheroes with no more than blue collar grit and a willingness to fight dirty.\n" +
                     "\n"
         )
-
-        movieList.add(Movie1)
-        movieList.add(Movie2)
-        movieList.add(Movie3)
-        movieList.add(Movie4)
-        movieList.add(Movie5)
-        movieList.add(Movie6)
-        movieList.add(Movie7)
-        movieList.add(Movie8)
-        movieList.add(Movie9)
         movieList.add(Movie10)
-
-
     }
 
     override fun onClick(movie: Movie) {
