@@ -9,10 +9,10 @@ class CardViewHolder (
         ) : RecyclerView.ViewHolder(cardshelfBinding.root)
 {
     fun bindMovie(movie: Movie){
-        cardshelfBinding.cover.setImageResource(movie.cover)
-        cardshelfBinding.moviename.text = movie.moviename
+        cardshelfBinding.coverImageView.setImageResource(movie.cover)
+        cardshelfBinding.movieNameTextView.text = movie.moviename
 
-        cardshelfBinding.cardView.setOnClickListener{
+        cardshelfBinding.movieCardView.setOnClickListener{
             clickListener.onClick(movie)
         }
 

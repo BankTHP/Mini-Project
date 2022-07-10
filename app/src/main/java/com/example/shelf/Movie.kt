@@ -1,7 +1,8 @@
 package com.example.shelf
 
 var movieList = mutableListOf<Movie>()
-val MOVIE_ID_EXTRA = "movieExtra"
+val MOVIE_EXTRA_ID = "MOVIE_EXTRA_ID"
+
 class Movie (
     var cover : Int,
     var moviename : String,

@@ -11,17 +11,19 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val movieID = intent.getIntExtra(MOVIE_ID_EXTRA,-1)
+        val movieID = intent.getIntExtra(MOVIE_EXTRA_ID,-1)
         val movie = movieFromID(movieID)
         if(movie != null)
         {
-            binding.cover.setImageResource(movie.cover)
-            binding.title.text = movie.moviename
-            binding.genre.text = movie.genres
-            binding.description.text = movie.description
+            binding.coverImageView.setImageResource(movie.cover)
+            binding.titleTextView.text = movie.moviename
+            binding.genreTextView.text = movie.genres
+            binding.descriptionTextView.text = movie.description
+        }
+        binding.detailBackButton.setOnClickListener{
+            onBackPressed()
         }
     }
-
     private fun movieFromID(movieID: Int): Movie?
     {
         for(movie in movieList)

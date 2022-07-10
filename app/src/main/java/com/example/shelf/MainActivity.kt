@@ -3,7 +3,6 @@ package com.example.shelf
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shelf.databinding.ActivityMainBinding
 
@@ -14,12 +13,11 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         addmovies()
 
         val mainActivity = this
         var layoutManagerHorizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        var grip = GridLayoutManager(applicationContext, 3)
+        //var grip = GridLayoutManager(applicationContext, 3)
         binding.shelfRecyclerView.apply {
             //layoutManager = GridLayoutManager(applicationContext, 3)
             layoutManager = layoutManagerHorizontal
@@ -27,8 +25,13 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
         }
     }
 
-    private fun addmovies() {
+    override fun onClick(movie: Movie) {
+        val intent = Intent(applicationContext, DetailActivity::class.java)
+        intent.putExtra(MOVIE_EXTRA_ID, movie.id)
+        startActivity(intent)
+    }
 
+    private fun addmovies() {
         val Movie1 = Movie(
             R.drawable.batman,
             "Batman",
@@ -119,11 +122,5 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
                     "\n"
         )
         movieList.add(Movie10)
-    }
-
-    override fun onClick(movie: Movie) {
-        val intent = Intent(applicationContext, DetailActivity::class.java)
-        intent.putExtra(MOVIE_ID_EXTRA, movie.id)
-        startActivity(intent)
     }
 }
