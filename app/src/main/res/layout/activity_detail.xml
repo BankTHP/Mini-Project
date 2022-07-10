@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,23 +11,24 @@
         android:id="@+id/detailBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:src="@android:drawable/ic_menu_revert"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:background="#80000000"
-        android:elevation="1dp"
-        android:src="@android:drawable/ic_menu_revert"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageButton>
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="1dp"
+        android:background="@drawable/round_button"
+        ></ImageButton>
 
     <ImageView
         android:id="@+id/coverImageView"
         android:layout_width="0dp"
         android:layout_height="500dp"
-        android:background="@drawable/batman"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/bottom_transparent_gradient"
+        android:background="@drawable/batmantheanimatedseries"
+        android:src="@drawable/bottom_transparent_gradient"
 
         />
 
@@ -34,12 +36,12 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="400dp"
         android:text="Batman"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="400dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,24 +51,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        tools:text="Action" />
+        tools:text="Action"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/playButton"
         style="@style/Widget.Material3.Button.Icon"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#FFFFFF"
         android:text="เล่น"
         android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
         android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/genreTextView" />
 
@@ -78,11 +80,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:ellipsize="end"
-        android:maxLines="3"
         android:text="description here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\ndescription here\n"
-        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/playButton"
-        app:layout_constraintTop_toBottomOf="@id/playButton" />
+        android:maxLines="3"
+        app:layout_constraintTop_toBottomOf="@id/playButton"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
