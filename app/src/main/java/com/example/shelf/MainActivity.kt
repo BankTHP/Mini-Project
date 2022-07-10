@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         addmovies()
-
         val mainActivity = this
         var layoutManagerHorizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         //var grip = GridLayoutManager(applicationContext, 3)
@@ -101,7 +100,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
             "The Flash",
             "Science-Fiction",
             "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, " +
-                    "granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \\\"meta-human\\\" " +
+                    "granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only meta-human " +
                     "who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends " +
                     "and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash!"
         )
@@ -110,7 +109,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
             R.drawable.theflashchroniclesofcisco,
             "The Flash: Chronicles of Cisco",
             "Action",
-            "he Flash: Chronicles of Cisco follows \"The Flash\" character Cisco Ramon as he works late at S.T.A.R. Labs making improvements to the Flash's suit."
+            "he Flash: Chronicles of Cisco follows The Flash character Cisco Ramon as he works late at S.T.A.R. Labs making improvements to the Flash's suit."
         )
         movieList.add(Movie9)
         val Movie10 = Movie(
@@ -118,8 +117,7 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
             "The Boys",
             "Action",
             "In a world where superheroes embrace the darker side of their massive celebrity and fame, The Boys centres on a group of vigilantes known informally as " +
-                    "\\\"The Boys,\\\" who set out to take down corrupt superheroes with no more than blue collar grit and a willingness to fight dirty.\n" +
-                    "\n"
+                    "The Boys, who set out to take down corrupt superheroes with no more than blue collar grit and a willingness to fight dirty."
         )
         movieList.add(Movie10)
     }

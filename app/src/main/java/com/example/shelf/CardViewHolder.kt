@@ -11,7 +11,6 @@ class CardViewHolder (
     fun bindMovie(movie: Movie){
         cardshelfBinding.coverImageView.setImageResource(movie.cover)
         cardshelfBinding.movieNameTextView.text = movie.moviename
-
         cardshelfBinding.movieCardView.setOnClickListener{
             clickListener.onClick(movie)
         }
