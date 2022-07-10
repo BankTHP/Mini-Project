@@ -15,7 +15,7 @@ class DetailActivity : AppCompatActivity() {
         val movie = movieFromID(movieID)
         if(movie != null)
         {
-            binding.coverImageView.setImageResource(movie.cover)
+            binding.coverImageView.setBackgroundResource(movie.cover)
             binding.titleTextView.text = movie.moviename
             binding.genreTextView.text = movie.genres
             binding.descriptionTextView.text = movie.description
