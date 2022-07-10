@@ -15,12 +15,13 @@ class MainActivity : AppCompatActivity(), MovieOnClickListener {
         setContentView(binding.root)
         addmovies()
         val mainActivity = this
-        var layoutManagerHorizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        var layoutManagerHorizontal =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         //var grip = GridLayoutManager(applicationContext, 3)
         binding.shelfRecyclerView.apply {
             //layoutManager = GridLayoutManager(applicationContext, 3)
             layoutManager = layoutManagerHorizontal
-            adapter = CardAdapter(movieList,mainActivity)
+            adapter = CardAdapter(movieList, mainActivity)
         }
     }
 
